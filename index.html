@@ -1,27 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Never Mind the Scandal and Liber</title>
-<style>
-    html, body {
-        background-color: #2f3136;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-    .sb-img {
-        height: 35%;
-        width: auto;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>Never Mind the Scandal and Liber</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <style>
+        :root {
+            --main-dark-1:#22272e;
+            --main-dark-2:#2d333b;
+            --main-dark-3:#313a46;
+            --main-dark-4:#343d48;
+            --main-dark-5:#404c5a;
+            --main-dark-6:#4b5b6d;
+            --main-dark-8:#6d7986;
+            --main-dark-7:#467bc3;
+            --main-white-1:#fff;
+            --main-white-2:#adbac7;
+        }
+        body {
+            background-color:var(--main-dark-1);
+            height:100vh;
+            overflow:hidden;
+        }
+        .warp {
+            width:800px;
+            height:100%;
+            margin:0 auto;
+            display:flex;
+            flex-flow:column;
+            justify-content:center;
+            padding:30px;
+        }
+        .user-warp {
+            background-color:var(--main-dark-4);
+            display:flex;
+            flex-flow:column;
+            justify-content:center;
+            align-items:center;
+            padding:20px 30px;
+            margin-bottom:20px;
+        }
+        .user-warp p {
+            color:var(--main-white-2)
+        }
+        .user-warp img {
+            width:70px;
+            border-radius:100%;
+        }
+        .pay-warp {
+            background-color:var(--main-dark-3);
+            padding:50px 0;
+            border-radius:5px;
+        }
+        .qr-warp {
+            display:flex;
+            justify-content:space-evenly;
+            width:500px;
+            margin:0 auto;
+            align-items:center;
+        }
+        .qr-warp .qr {
+            display:flex;
+            flex-flow:column;
+            justify-content:center;
+            align-items:center;
+        }
+        .qr-warp .qr img {
+            width:200px;
+        }
+        .qr-warp .qr span {
+            margin-top:20px;
+            color:var(--main-white-2);
+        ''
+        }
+        @media(max-width:800px) {
+            .warp {
+                width:auto;
+            }
+            .pay-warp {
+            }
+        }
+        @media(max-width:550px) {
+            body{
+                height: 100%;
+                overflow: auto;
+            }
+            .qr-warp {
+                flex-flow:column;
+                width:auto;
+                height:500px;
+            }
+            .qr-warp .qr{
+                margin-bottom: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-<img class="sb-img" src="/nmsl.gif" alt="NMSL" title="Never Mind the Scandal and Liber" />
-</div>
+    <div class="warp">
+        <div class="user-warp">
+            <img src="./nmsl.gif" alt="nmsl.gif">
+            <p>大哥哥大姐们啊！你们都是有钱的人呐～谁有那多余的零钱？给我这流浪的人啊...</p>
+        </div>
+        <div class="pay-warp">
+            <div class="qr-warp">
+                <div class="qr">
+                    <img src="./wechat.gif" alt="Wechat Pay">
+                    <span>微信扫码</span>
+                </div>
+                <div class="qr">
+                    <img src="./alipay.gif" alt="Alipay">
+                    <span>支付宝扫码</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
